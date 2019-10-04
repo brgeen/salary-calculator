@@ -21,22 +21,13 @@ function addEmployeeButton() {
         <td>${id}</td>
         <td>${title}</td>
         <td>${salary}</td>
+        <td><button class="delete-button">Delete</button></td>
         </tr>`);
     
-
-    console.log(firstName);
-    console.log(lastName);
-    console.log(id);
-    console.log(title);
-    console.log(salary);
-
-
     firstName = $('#first-name-input').val('');
     lastName = $('#last-name-input').val('');
     id = $('#id-input').val('');
     title = $('#title-input').val('');
     salary = $('#annual-salary-input').val('');
-
-
 
 }

@@ -5,6 +5,7 @@ $(document).ready(onReady);
 function onReady() {
     console.log('jquery running');
     $('#add-employee-button').on('click', addEmployeeButton);
+    $('table').on('click', '#delete-button', deleteEmployeeButton);
 
 }
 
@@ -21,7 +22,7 @@ function addEmployeeButton() {
         <td>${id}</td>
         <td>${title}</td>
         <td>${salary}</td>
-        <td><button class="delete-button">Delete</button></td>
+        <td><button id="delete-button">Delete</button></td>
         </tr>`);
     
     firstName = $('#first-name-input').val('');
@@ -30,4 +31,10 @@ function addEmployeeButton() {
     title = $('#title-input').val('');
     salary = $('#annual-salary-input').val('');
 
+
+}
+
+function deleteEmployeeButton() {
+    $(this).closest('tr').remove();
+    
 }

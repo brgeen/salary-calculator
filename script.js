@@ -15,6 +15,15 @@ function addEmployeeButton() {
     let title = $('#title-input').val();
     let salary = $('#annual-salary-input').val();
 
+    $('table').append(`<tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${id}</td>
+        <td>${title}</td>
+        <td>${salary}</td>
+        </tr>`);
+    
+
     console.log(firstName);
     console.log(lastName);
     console.log(id);

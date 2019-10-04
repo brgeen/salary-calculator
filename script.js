@@ -10,7 +10,7 @@ function onReady() {
 
 }
 
-let monthlySalary = 100;
+let monthlySalary = 0;
 
 function addEmployeeButton() {
     let firstName = $('#first-name-input').val();
@@ -28,13 +28,15 @@ function addEmployeeButton() {
         <td><button id="delete-button">Delete</button></td>
         </tr>`);
 
+    monthlySalary += parseInt(salary);
+
     firstName = $('#first-name-input').val('');
     lastName = $('#last-name-input').val('');
     id = $('#id-input').val('');
     title = $('#title-input').val('');
     salary = $('#annual-salary-input').val('');
 
-    monthlySalary += 100;
+
     calculateMonthlySalary();
 
 }

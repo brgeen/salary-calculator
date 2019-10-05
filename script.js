@@ -10,7 +10,7 @@ function onReady() {
 
 }
 
-let monthlySalary = 0;
+let annualSalary = 0;
 
 function addEmployeeButton() {
     let firstName = $('#first-name-input').val();
@@ -28,7 +28,7 @@ function addEmployeeButton() {
         <td><button class="delete-button">Delete</button></td>
         </tr>`);
 
-    monthlySalary += parseInt(salary);
+    annualSalary += parseInt(salary);
 
     firstName = $('#first-name-input').val('');
     lastName = $('#last-name-input').val('');
@@ -42,19 +42,24 @@ function addEmployeeButton() {
 
 function deleteEmployeeButton() {
 
-    
-    let deleteSalary = $(this).closest('td').prev().text() //need to figure out DOM traversal
+
+    let deleteSalary = $(this).closest('td').prev().text()
     console.log(deleteSalary);
+    annualSalary -= deleteSalary;
     $(this).closest('tr').remove();
-    
-    
-    
+
+
+
     calculateMonthlySalary();
 }
 
 
 function calculateMonthlySalary() {
-    let annualSalary = monthlySalary / 12;
-    $('#total-monthly-salary').text(annualSalary.toFixed(2));
+    let monthlySalary = annualSalary / 12;
+    if (monthlySalary >= 20000) {
+        $('#total-monthly-salary').css('color', 'red');
+    }
+
+    $('#total-monthly-salary').text(monthlySalary.toFixed(2));
 }
 

@@ -1,3 +1,7 @@
 .highlight {
     background-color: red;
 }
+
+body {
+    font-family: 'Lucida', sans-serif;
+}

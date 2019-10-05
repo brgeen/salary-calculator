@@ -18,6 +18,7 @@ function addEmployeeButton() {
     let id = $('#id-input').val();
     let title = $('#title-input').val();
     let salary = $('#annual-salary-input').val();
+    
 
     $('table').append(`<tr>
         <td>${firstName}</td>
@@ -58,11 +59,14 @@ function deleteEmployeeButton() {
 
 function calculateMonthlySalary() {
     let monthlySalary = annualSalary / 12;
-    
+
     if (monthlySalary > 20000) {
         $('#total-monthly-salary').css('color', 'red');
     }
 
-    $('#total-monthly-salary').text(monthlySalary.toFixed(2));
+    $('#total-monthly-salary').text(accounting.formatMoney(monthlySalary));
 }
+
+
+
 

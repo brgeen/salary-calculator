@@ -5,7 +5,7 @@ $(document).ready(onReady);
 function onReady() {
     console.log('jquery running');
     $('#add-employee-button').on('click', addEmployeeButton);
-    $('table').on('click', '#delete-button', deleteEmployeeButton);
+    $('table').on('click', '.delete-button', deleteEmployeeButton);
     $('#total-monthly-salary').on('load', calculateMonthlySalary);
 
 }
@@ -24,8 +24,8 @@ function addEmployeeButton() {
         <td>${lastName}</td>
         <td>${id}</td>
         <td>${title}</td>
-        <td>${salary}</td>
-        <td><button id="delete-button">Delete</button></td>
+        <td class="salary">${salary}</td>
+        <td><button class="delete-button">Delete</button></td>
         </tr>`);
 
     monthlySalary += parseInt(salary);
@@ -36,18 +36,25 @@ function addEmployeeButton() {
     title = $('#title-input').val('');
     salary = $('#annual-salary-input').val('');
 
-
     calculateMonthlySalary();
 
 }
 
 function deleteEmployeeButton() {
+
+    
+    let deleteSalary = $(this).closest('td').prev().text() //need to figure out DOM traversal
+    console.log(deleteSalary);
     $(this).closest('tr').remove();
-    monthlySalary -= 50;
+    
+    
+    
     calculateMonthlySalary();
 }
 
 
 function calculateMonthlySalary() {
-    $('#total-monthly-salary').text(monthlySalary)
+    let annualSalary = monthlySalary / 12;
+    $('#total-monthly-salary').text(annualSalary.toFixed(2));
 }
+

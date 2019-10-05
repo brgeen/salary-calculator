@@ -8,6 +8,11 @@ body {
 table {
     border-collapse: collapse;
     width: 75%;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
 }
 
 td, th {
@@ -39,10 +44,19 @@ button:hover {
     background-color: rgb(200, 200, 200);
 }
 
-/* button:focus {
-    background-color: rgb(245, 245, 245);
-} */
-
 h1 {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+h4 {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
 }

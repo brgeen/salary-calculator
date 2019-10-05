@@ -1,7 +1,48 @@
 body {
-    font-family: 'Lucida', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: url(images/positive_85.png);
     background-size: 35%;
-    opacity: 0.8;
+    opacity: 0.78;
 }
 
+table {
+    border-collapse: collapse;
+    width: 75%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input {
+    padding: 8px;
+}
+
+button {
+    padding: 9px;
+    font-size: 11px;
+    font-weight: bold;
+    font-variant-caps: all-small-caps;
+    background-color: rgb(245, 245, 245);
+    border-style: solid;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+/* button:focus {
+    background-color: rgb(245, 245, 245);
+} */
+
+h1 {
+    font-size: 40px;
+}

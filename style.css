@@ -1,7 +1,7 @@
-.highlight {
-    background-color: red;
-}
-
 body {
     font-family: 'Lucida', sans-serif;
+    background: url(images/positive_85.png);
+    background-size: 35%;
+    opacity: 0.8;
 }
+

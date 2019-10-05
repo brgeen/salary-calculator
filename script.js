@@ -48,7 +48,9 @@ function deleteEmployeeButton() {
     annualSalary -= deleteSalary;
     $(this).closest('tr').remove();
 
-
+    if (annualSalary / 12 < 20000) {
+        $('#total-monthly-salary').css('color', 'black');
+    }
 
     calculateMonthlySalary();
 }
@@ -56,7 +58,8 @@ function deleteEmployeeButton() {
 
 function calculateMonthlySalary() {
     let monthlySalary = annualSalary / 12;
-    if (monthlySalary >= 20000) {
+    
+    if (monthlySalary > 20000) {
         $('#total-monthly-salary').css('color', 'red');
     }
 

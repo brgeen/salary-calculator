@@ -18,6 +18,8 @@ function addEmployeeButton() {
     let id = $('#id-input').val();
     let title = $('#title-input').val();
     let salary = $('#annual-salary-input').val();
+
+    
     
 
     $('table').append(`<tr>
@@ -25,7 +27,7 @@ function addEmployeeButton() {
         <td>${lastName}</td>
         <td>${id}</td>
         <td>${title}</td>
-        <td class="salary">${salary}</td>
+        <td class="salary">${accounting.formatMoney(salary)}</td>
         <td><button class="delete-button">Delete</button></td>
         </tr>`);
 
@@ -45,8 +47,8 @@ function deleteEmployeeButton() {
 
 
     let deleteSalary = $(this).closest('td').prev().text()
-    console.log(deleteSalary);
-    annualSalary -= deleteSalary;
+    
+    annualSalary -= accounting.unformat(deleteSalary);
     $(this).closest('tr').remove();
 
     if (annualSalary / 12 < 20000) {

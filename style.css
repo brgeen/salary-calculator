@@ -10,7 +10,7 @@ body {
 table {
     border-collapse: collapse;
     width: 75%;
-    color: #000D0A;
+    color: #333e48;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -24,7 +24,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: rgba(146, 166, 166, 0.6);
+    background-color: #E7F5FE;
 }
 
 input {
@@ -37,18 +37,19 @@ button {
     font-size: 11px;
     font-weight: bold;
     font-variant-caps: all-small-caps;
-    background-color: rgb(245, 245, 245);
+    background-color: #34a6fdb0;
     border-style: solid;
     transition-duration: 0.4s;
     outline: none;
+    box-shadow: 0 0 5px 0 rgba(25,25,25,0.1);
 }
 
 button:hover {
-    background-color: rgb(200, 200, 200);
+    background-color: #0d94fcb0;
 }
 
 h1 {
-    color: #344b4b;
+    color: #0d96ffe0;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 47px;
     font-weight: bold;
@@ -57,7 +58,7 @@ h1 {
 }
 
 h4 {
-    color: #000D0A;
+    color: #0d96ffe7;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;

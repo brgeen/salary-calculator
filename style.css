@@ -3,12 +3,14 @@ body {
     background: url(images/positive_85.png);
     background-size: 35%;
     opacity: 0.78;
+    margin-left: 30px;
+    margin-top: 50px;
 }
 
 table {
     border-collapse: collapse;
     width: 75%;
-    color: #111;
+    color: #000D0A;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -22,11 +24,12 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: rgba(146, 166, 166, 0.6);
 }
 
 input {
     padding: 8px;
+    margin: 2px;
 }
 
 button {
@@ -45,18 +48,19 @@ button:hover {
 }
 
 h1 {
-    color: #111;
+    color: #344b4b;
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 40px;
+    font-size: 47px;
     font-weight: bold;
     letter-spacing: -1px;
     line-height: 1;
 }
 
 h4 {
-    color: #111;
+    color: #000D0A;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: bold;
     line-height: 1;
 }
+

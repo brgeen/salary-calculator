@@ -57,7 +57,7 @@ function calculateMonthlySalary() {
     let monthlySalary = annualSalary / 12;
 
     if (monthlySalary > 20000) {
-        $('#total-monthly-salary').css('color', 'red');
+        $('#total-monthly-salary').css('color', '#A63841');
     }
 
     $('#total-monthly-salary').text(accounting.formatMoney(monthlySalary));

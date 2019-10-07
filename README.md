@@ -15,9 +15,11 @@ This application is for business managers and accountants to keep track of their
 
 ![Alt text](images/salary_calculator_screenshot.jpg?raw=true "Project Image")
 
-## Repository
+## Installation
 
-https://github.com/brgeen/jquery-salary-calculator
+- Fork and clone the repository from GitHub.
+- https://github.com/brgeen/jquery-salary-calculator
+- Open the index.html in your browser.
 
 ## Licenses
 
